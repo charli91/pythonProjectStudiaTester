@@ -1,19 +1,22 @@
 # Tworzenie nowego obiektu, wstęp do programowania obiektowego
 class Person:  # nazwy klas wielką literą
-    # pierwsza funkcja to konstruktor: funkcja wykonywana podczas tworzenia obiektu
+    # pierwsza funkcja (funkcję w ciele klasy nazywamy metodą) to konstruktor: instrukcja do tworzenia nowego obiektu;
+    # nadane w niej argumenty są wymagalne dla nowego obiektu
     def __init__(self, xxx, yyy):
         self.name = xxx
         self.age = yyy
 
-    # funkcja, żeby obiekt się przedstawił
+    # funkcja, żeby obiekt się przedstawił; metoda, która nie przyjmuje żadnego parametru (poza self,
+    # który jest obligatoryjny dla każdej metody); metoda ta nic nie zwraca, jedynie korzysta z odpowiednich pól,
+    # aby skonstruować napis, który następnie wyświetla
     def tell_your_name(self):  # snake_case in function names
         print(f"My name is {self.name}")
 
-    # funkcja, żeby obiekt powiedział, ile ma lat
+    # metoda, żeby obiekt powiedział, ile ma lat
     def define_age(self):
         print(f"My age is {self.age}")
 
-    # funkcja zmiany imienia obiektu
+    # metoda zmiany imienia obiektu
     def change_name(self, zzz):
         self.name = zzz
 
@@ -38,7 +41,7 @@ pawel.tell_your_name()
 pawel.define_age()
 
 # wywołanie obiektu karolina z funkcją change_name i argumentem, jaki funkcja ma przyjąć, czyli zmianą imienia na
-# imię Joanna
+# imię Joanna; jeśli nie mam funkcji zmiany imienia, to ten sam efekt wywołałoby karolina.name = "Joanna"
 karolina.change_name("Joanna")
 karolina.tell_your_name()
 
