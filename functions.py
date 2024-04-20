@@ -13,7 +13,7 @@ def task_instruction(time_left):
         print("Sorry, you will probably fail")
     else:
         print("You were supposed to tell me how much time do you have!")
-        # rekurencja - wywołanie funkcji przez samą siebie
+        # rekurencja: wywołanie funkcji przez samą siebie; jeśli nie znajdzie rozwiązania, to wykona się ponownie
         task_instruction(input("How much time do you have? (whole week/whole day/not enough): "))
 
 task_instruction(input("How much time do you have? (whole week/whole day/not enough): "))
