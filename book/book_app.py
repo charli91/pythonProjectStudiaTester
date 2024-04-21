@@ -17,24 +17,20 @@ def main():
             # while, makes it possible to repeat adding
             while True:
                 print("That's great. Let's add this book to library")
-                library = []
-                new_book = Book(
-                    title=input("What's the title of this book?: "),
-                    author=input("What's the author of this book?: "),
-                    year=input("What's the year of this book?: ")
-                )
-                library.append(new_book)
-                show_library = new_book.get_info()
-                want_to_add = str(input("Your book was successfully added!\n"
-                                        "To change your book press any key. "
-                                        "To quit press 'q': "))
-                want_to_add = want_to_add.lower()
-
-                if want_to_add == "n":
-                    print(f"Ok, thanks.")
-                    break
-            print(f"This is your library:\n{show_library}")
-            break
+                number_of_books_to_add = int(input("How many books you want to add?: "))
+                # part to be modified based on results get on training file test_tablicy
+                for a in range(number_of_books_to_add):
+                    library = []
+                    new_book = Book(
+                        title=input(f"What's the title of {a}this book?: "),
+                        author=input("What's the author of this book?: "),
+                        year=input("What's the year of this book?: ")
+                    )
+                    library.insert(new_book)
+                    # show_library = new_book.get_info()
+                # print(f"This is your library:\n{show_library}")
+                print(f"This is your library:\n{library}")
+                break
 
         # Condition for invalid answer for if_read_answer
         else:
