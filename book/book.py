@@ -16,4 +16,3 @@ class Book:
 
     def change_year(self, new_year):
         self.year = new_year
-

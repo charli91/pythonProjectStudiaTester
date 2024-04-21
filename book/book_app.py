@@ -1,6 +1,38 @@
 from book import Book
+
+
 def main():
-    pass
+    while True:
+        if_read_answer = str(input("This will be your new book library. Did you read any book lately? (y/n): "))
+        if_read_answer = if_read_answer.lower()
+
+        if if_read_answer == "n":
+            print("That's sad. So I guess you won't need new library.")
+            break
+        elif if_read_answer == "y":
+            while True:
+                print("That's great. Let's add this book to library")
+                library = []
+                new_book = Book(
+                    title=input("What's the title of this book?: "),
+                    author=input("What's the author of this book?: "),
+                    year=input("What's the year of this book?: ")
+                )
+                library.append(new_book)
+                show_library = new_book.get_info()
+                if_want_to_add = str(input("Your book was successfully added!\n"
+                                           "To add some more press any key. "
+                                           "To quit press 'n': "))
+                if_want_to_add = if_want_to_add.lower()
+
+                if if_want_to_add == "n":
+                    print(f"Ok, thanks.")
+                    break
+            print(f"This is your library:\n{show_library}")
+            break
+        else:
+            print("You were supposed to enter value y/n")
+
 
 if __name__ == '__main__':
     main()
