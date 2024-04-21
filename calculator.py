@@ -1,6 +1,6 @@
 from colors import Bcolors
 
-
+# Defining methods used in Calculator
 class Calculator:
     def addition(self, a, b):
         c = a + b
@@ -27,6 +27,7 @@ def main():
     print("Calculator")
 
     while True:
+        # printing instructions for user
         print(f"Choose your operation:\n"
               f"{Bcolors.OKBLUE}1.Addition\n"
               f"{Bcolors.OKCYAN}2.Subtraction\n"
@@ -34,17 +35,20 @@ def main():
               f"{Bcolors.FAIL}4.Division\n{Bcolors.ENDC}"
               f"{Bcolors.BOLD}5.Quit program{Bcolors.ENDC}")
 
+        # User is choosing one option at the time for doing operation
         choice = int(input(f"Your choice ({Bcolors.OKBLUE}1{Bcolors.ENDC}/"
                            f"{Bcolors.OKCYAN}2{Bcolors.ENDC}/"
                            f"{Bcolors.OKGREEN}3{Bcolors.ENDC}/"
                            f"{Bcolors.FAIL}4{Bcolors.ENDC}/"
                            f"{Bcolors.BOLD}5{Bcolors.ENDC}): "))
 
+        # Quiting program as it is in instructions
         if choice == 5:
-            print("Thank you for using calculator")
+            print(f"{Bcolors.HEADER}Thank you for using calculator{Bcolors.ENDC}")
             # break przerywa działanie pętli while użytej na górze
             break
 
+        # Defining numbers for operation that user chose
         number1 = float(input("Enter first number: "))
         number2 = float(input("Enter second number: "))
 
