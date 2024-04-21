@@ -1,5 +1,6 @@
 from book import Book
 
+
 # To change/ add / modify: show list of options with showing library (empty at first), adding new book without
 # deleting previous, changing only some parameters (title, author, year)
 def main():
@@ -13,7 +14,7 @@ def main():
             break
         # if he did read sth proposition to add to library
         elif if_read_answer == "y":
-            # while makes it possible to repeat adding
+            # while, makes it possible to repeat adding
             while True:
                 print("That's great. Let's add this book to library")
                 library = []
