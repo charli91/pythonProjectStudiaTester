@@ -27,7 +27,7 @@ def main():
                 show_library = new_book.get_info()
                 want_to_add = str(input("Your book was successfully added!\n"
                                         "To change your book press any key. "
-                                        "To quit press 'n': "))
+                                        "To quit press 'q': "))
                 want_to_add = want_to_add.lower()
 
                 if want_to_add == "n":
