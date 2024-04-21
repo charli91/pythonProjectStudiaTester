@@ -12,6 +12,10 @@ class Calculator:
         return c
 
     def division(self, a, b):
-        pass
+        if b == 0:
+            return ("Can't divide by 0")
+        else:
+            c = a / b
+            return c
 
 
