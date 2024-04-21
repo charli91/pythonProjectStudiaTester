@@ -1,15 +1,19 @@
 from book import Book
 
-
+# To change/ add / modify: show list of options with showing library (empty at first), adding new book without
+# deleting previous, changing only some parameters (title, author, year)
 def main():
     while True:
+        # Defining if user needs library and if he read any book lately
         if_read_answer = str(input("This will be your new book library. Did you read any book lately? (y/n): "))
         if_read_answer = if_read_answer.lower()
 
         if if_read_answer == "n":
             print("That's sad. So I guess you won't need new library.")
             break
+        # if he did read sth proposition to add to library
         elif if_read_answer == "y":
+            # while makes it possible to repeat adding
             while True:
                 print("That's great. Let's add this book to library")
                 library = []
@@ -21,7 +25,7 @@ def main():
                 library.append(new_book)
                 show_library = new_book.get_info()
                 if_want_to_add = str(input("Your book was successfully added!\n"
-                                           "To add some more press any key. "
+                                           "To change your book press any key. "
                                            "To quit press 'n': "))
                 if_want_to_add = if_want_to_add.lower()
 
@@ -30,6 +34,8 @@ def main():
                     break
             print(f"This is your library:\n{show_library}")
             break
+
+        # Condition for invalid answer for if_read_answer
         else:
             print("You were supposed to enter value y/n")
 
