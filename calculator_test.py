@@ -16,6 +16,9 @@ class TestCalculator(unittest.TestCase):
 
     def test_2_subtract(self):
         self.assertEqual(self.calculator.subtraction(25, 10), 15)
+        self.assertEqual(self.calculator.subtraction(-10, -20), 10)
+        self.assertEqual(self.calculator.subtraction(24, -10), 34)
+        self.assertEqual(self.calculator.subtraction(-5, 10), -15)
 
 
     def test_3_multiply(self):
@@ -25,6 +28,7 @@ class TestCalculator(unittest.TestCase):
     def test_4_divide(self):
         self.assertEqual(self.calculator.division(30, 10), 3)
         self.assertEqual(self.calculator.division(10, 0), "Can't divide by 0")
+        self.assertEqual(self.calculator.division(-10, 2), -5)
 
 if __name__ == '__main__':
     unittest.main()
