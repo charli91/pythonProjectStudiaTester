@@ -1,4 +1,6 @@
 from colors import Bcolors
+
+
 class Calculator:
     def addition(self, a, b):
         c = a + b
@@ -25,9 +27,18 @@ def main():
     print("Calculator")
 
     while True:
-        print("Choose your operation:\n1.Addition\n2.Subtraction\n3.Multiplication\n4.Division\n5.Quit program")
+        print(f"Choose your operation:\n"
+              f"{Bcolors.OKBLUE}1.Addition\n"
+              f"{Bcolors.OKCYAN}2.Subtraction\n"
+              f"{Bcolors.OKGREEN}3.Multiplication\n"
+              f"{Bcolors.FAIL}4.Division\n{Bcolors.ENDC}"
+              f"{Bcolors.BOLD}5.Quit program{Bcolors.ENDC}")
 
-        choice = int(input("Your choice (1/2/3/4/5): "))
+        choice = int(input(f"Your choice ({Bcolors.OKBLUE}1{Bcolors.ENDC}/"
+                           f"{Bcolors.OKCYAN}2{Bcolors.ENDC}/"
+                           f"{Bcolors.OKGREEN}3{Bcolors.ENDC}/"
+                           f"{Bcolors.FAIL}4{Bcolors.ENDC}/"
+                           f"{Bcolors.BOLD}5{Bcolors.ENDC}): "))
 
         if choice == 5:
             print("Thank you for using calculator")
@@ -54,9 +65,9 @@ def main():
                 print("Your result : ", result)
             else:
                 print("Invalid number provided")
-        # ExceptionMessage: to może być dowolna nazwa zmiennej
-        except Exception as ExceptionMessage:
-            print(ExceptionMessage)
+        # as e: to może być dowolna nazwa zmiennej
+        except Exception as exceptionMessage:
+            print(exceptionMessage)
 
 
 # ten if powoduje wyłączenie uruchomienia tego pliku przy uruchamianiu plików, które mają go zaimportowanego
