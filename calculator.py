@@ -1,3 +1,4 @@
+from colors import Bcolors
 class Calculator:
     def addition(self, a, b):
         c = a + b
@@ -22,29 +23,40 @@ class Calculator:
 
 def main():
     print("Calculator")
-    print("Choose your operation:\n1.Addition\n2.Subtraction\n3.Multiplication\n4.Division")
 
-    choice = int(input("Your choice (1/2/3/4): "))
+    while True:
+        print("Choose your operation:\n1.Addition\n2.Subtraction\n3.Multiplication\n4.Division\n5.Quit program")
 
-    number1 = float(input("Enter first number: "))
-    number2 = float(input("Enter second number: "))
+        choice = int(input("Your choice (1/2/3/4/5): "))
 
-    calculator = Calculator()
+        if choice == 5:
+            print("Thank you for using calculator")
+            # break przerywa działanie pętli while użytej na górze
+            break
 
-    if choice == 1:
-        result = calculator.addition(number1, number2)
-        print("Your result: ", result)
-    elif choice == 2:
-        result = calculator.subtraction(number1, number2)
-        print("Your result : ", result)
-    elif choice == 3:
-        result = calculator.multiplication(number1, number2)
-        print("Your result : ", result)
-    elif choice == 4:
-        result = calculator.division(number1, number2)
-        print("Your result : ", result)
-    else:
-        print("Invalid number provided")
+        number1 = float(input("Enter first number: "))
+        number2 = float(input("Enter second number: "))
+
+        calculator = Calculator()
+
+        try:
+            if choice == 1:
+                result = calculator.addition(number1, number2)
+                print("Your result: ", result)
+            elif choice == 2:
+                result = calculator.subtraction(number1, number2)
+                print("Your result : ", result)
+            elif choice == 3:
+                result = calculator.multiplication(number1, number2)
+                print("Your result : ", result)
+            elif choice == 4:
+                result = calculator.division(number1, number2)
+                print("Your result : ", result)
+            else:
+                print("Invalid number provided")
+        # ExceptionMessage: to może być dowolna nazwa zmiennej
+        except Exception as ExceptionMessage:
+            print(ExceptionMessage)
 
 
 # ten if powoduje wyłączenie uruchomienia tego pliku przy uruchamianiu plików, które mają go zaimportowanego
