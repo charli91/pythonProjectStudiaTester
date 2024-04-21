@@ -13,9 +13,7 @@ class Calculator:
 
     def division(self, a, b):
         if b == 0:
-            return ("Can't divide by 0")
+            raise ValueError("Can't divide by 0")
         else:
             c = a / b
             return c
-
-

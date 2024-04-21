@@ -31,7 +31,9 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(self.calculator.division(3, 2), 1.5)
 
     def test_5_divide_by_zero(self):
-        self.assertEqual(self.calculator.division(10, 0), "Can't divide by 0")
+        # self.assertEqual(self.calculator.division(10, 0), "Can't divide by 0")
+        with self.assertRaises(ValueError):
+            self.calculator.division(10, 0)
 
 
 if __name__ == '__main__':
