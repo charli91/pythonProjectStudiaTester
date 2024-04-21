@@ -25,12 +25,12 @@ def main():
                 )
                 library.append(new_book)
                 show_library = new_book.get_info()
-                if_want_to_add = str(input("Your book was successfully added!\n"
-                                           "To change your book press any key. "
-                                           "To quit press 'n': "))
-                if_want_to_add = if_want_to_add.lower()
+                want_to_add = str(input("Your book was successfully added!\n"
+                                        "To change your book press any key. "
+                                        "To quit press 'n': "))
+                want_to_add = want_to_add.lower()
 
-                if if_want_to_add == "n":
+                if want_to_add == "n":
                     print(f"Ok, thanks.")
                     break
             print(f"This is your library:\n{show_library}")
