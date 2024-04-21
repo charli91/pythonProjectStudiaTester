@@ -34,6 +34,17 @@ def main():
     if choice == 1:
         result = calculator.addition(number1, number2)
         print("Your result: ", result)
+    elif choice == 2:
+        result = calculator.subtraction(number1, number2)
+        print("Your result : ", result)
+    elif choice == 3:
+        result = calculator.multiplication(number1, number2)
+        print("Your result : ", result)
+    elif choice == 4:
+        result = calculator.division(number1, number2)
+        print("Your result : ", result)
+    else:
+        print("Invalid number provided")
 
 
 # ten if powoduje wyłączenie uruchomienia tego pliku przy uruchamianiu plików, które mają go zaimportowanego
