@@ -10,6 +10,8 @@ class TestCalculator(unittest.TestCase):
     # można dodać cyfry na początku np
     def test_1_add(self):
         self.assertEqual(self.calculator.addition(10, 20), 30)
+        self.assertEqual(self.calculator.addition(10, -2), 8)
+        self.assertEqual(self.calculator.addition(10, 0), 10)
 
 
     def test_2_subtract(self):
@@ -22,6 +24,7 @@ class TestCalculator(unittest.TestCase):
 
     def test_4_divide(self):
         self.assertEqual(self.calculator.division(30, 10), 3)
+        self.assertEqual(self.calculator.division(10, 0), "Can't divide by 0")
 
 if __name__ == '__main__':
     unittest.main()
