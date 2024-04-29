@@ -13,21 +13,20 @@
 # Uzupełnij metody klasy, aby wszystkie testy przeszły pomyślnie.
 
 class Account:
-    def __init__(self, balance, accountNumber):
+    def __init__(self, balance, account_number):
         self.balance = balance
-        self.accountNumber = accountNumber
+        self.accountNumber = account_number
 
-    def deposit(self, PaymentTransferValue):
-        finalBalance = self.balance + PaymentTransferValue
-        return finalBalance
+    def deposit(self, payment_transfer_value):
+        final_balance = self.balance + payment_transfer_value
+        return final_balance
 
-    def withdraw(self, PaymentTransferValue):
-        if PaymentTransferValue > self.balance:
+    def withdraw(self, payment_transfer_value):
+        if payment_transfer_value > self.balance:
             raise Exception("There is no enough money on your account")
         else:
-            finalBalance = self.balance - PaymentTransferValue
-            return finalBalance
+            final_balance = self.balance - payment_transfer_value
+            return final_balance
 
     def get_balance(self):
         return f'Balance: {self.balance} PLN, IBAN: {self.accountNumber}'
-

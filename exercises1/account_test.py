@@ -1,6 +1,7 @@
 from Account import Account
 import unittest
 
+
 class TestAccount(unittest.TestCase):
     def setUp(self):
         self.account = Account(3123.45, 'PL09184053349573708223772624')
@@ -19,3 +20,5 @@ class TestAccount(unittest.TestCase):
         self.assertEqual(self.account.get_balance(), f'Balance: 3123.45 PLN, IBAN: PL09184053349573708223772624')
 
 
+if __name__ == '__main__':
+    unittest.main()
