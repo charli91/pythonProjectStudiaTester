@@ -11,3 +11,23 @@
 # Test dla próby wypłaty więcej środków niż jest dostępnych (powinien wyrzucić błąd).
 # Implementuj metody klasy:
 # Uzupełnij metody klasy, aby wszystkie testy przeszły pomyślnie.
+
+class Account:
+    def __init__(self, balance, accountNumber):
+        self.balance = balance
+        self.accountNumber = accountNumber
+
+    def deposit(self, PaymentTransferValue):
+        finalBalance = self.balance + PaymentTransferValue
+        return finalBalance
+
+    def withdraw(self, PaymentTransferValue):
+        if PaymentTransferValue > self.balance:
+            raise Exception("There is no enough money on your account")
+        else:
+            finalBalance = self.balance - PaymentTransferValue
+            return finalBalance
+
+    def get_balance(self):
+        return f'Balance: {self.balance} PLN, IBAN: {self.accountNumber}'
+
