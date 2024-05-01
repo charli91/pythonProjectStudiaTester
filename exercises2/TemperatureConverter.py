@@ -17,24 +17,23 @@
 # Uzupełnij metody konwersji temperatur w taki sposób, aby wszystkie testy przeszły pomyślnie.
 
 class TempConverter:
-    def __init__(self, temperature):
-        self.temperature = temperature
-
-    def celsius_to_fahrenheit(self, fahrenheit):
-        # return:
+    def celsius_to_fahrenheit(self, temperature_from):
+        temperature_from: float
+        fahrenheit: float = temperature_from * 9 / 5 + 32
+        return fahrenheit
         pass
 
-    def fahrenheit_to_celsius(self):
+    def fahrenheit_to_celsius(self, temperature_from):
         pass
 
-    def kelvin_to_celsius(self):
+    def kelvin_to_celsius(self, temperature_from):
         pass
 
-    def celsius_to_kelvin(self):
+    def celsius_to_kelvin(self, temperature_from):
         pass
 
-    def fahrenheit_to_kelvin(self):
+    def fahrenheit_to_kelvin(self, temperature_from):
         pass
 
-    def kelvin_to_fahrenheit(self):
+    def kelvin_to_fahrenheit(self, temperature_from):
         pass
