@@ -13,4 +13,18 @@
 # Uzupełnij metody zarządzania zadaniami, aby wszystkie testy przeszły pomyślnie.
 
 class List:
-    def __init__(self)
+    def __init__(self):
+        self.tasks = []
+
+    def add_task(self):
+        pass
+
+    def remove_task(self):
+        pass
+
+    def mark_task_as_done(self):
+        pass
+
+    def get_all_tasks(self):
+        pass
+
