@@ -7,10 +7,10 @@ class ToDoListTest(unittest.TestCase):
         self.list = List()
 
     def test_1_add_task(self):
-        self.assertIn(self.list.add_task(), self.list.tasks)
+        self.assertEqual(self.list.add_task(), self.list.tasks)
 
     def test_2_remove_task(self):
-        pass
+        self.assertEqual(self.list.remove_task(), self.list.tasks)
 
     def test_3_mark_task_as_done(self):
         pass

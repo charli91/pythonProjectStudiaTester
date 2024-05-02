@@ -17,7 +17,9 @@ class List:
         self.tasks = []
 
     def add_task(self):
-        pass
+        new_task = input("Dodaj nowe zadanie: ")
+        self.tasks.append(new_task)
+        return self.tasks
 
     def remove_task(self):
         pass
