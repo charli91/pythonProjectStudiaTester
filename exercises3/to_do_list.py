@@ -14,7 +14,7 @@
 
 class List:
     def __init__(self):
-        self.tasks = []
+        self.tasks = ["Do the laundry", "Buy some groceries", "Go for a walk"]
 
     def add_task(self):
         new_task = input("Dodaj nowe zadanie: ")
@@ -22,11 +22,13 @@ class List:
         return self.tasks
 
     def remove_task(self):
-        pass
+        self.tasks.pop(int(input("Które zadanie chcesz usunąć?: ")))
+        return self.tasks
 
     def mark_task_as_done(self):
         pass
 
     def get_all_tasks(self):
-        pass
+        print(self.tasks)
+        return self.tasks
 

@@ -16,7 +16,8 @@ class ToDoListTest(unittest.TestCase):
         pass
 
     def test_4_get_all_tasks(self):
-        pass
+        self.assertEqual(self.list.get_all_tasks(), self.list.tasks)
+
 
 if __name__ == '__main__':
     unittest.main()
