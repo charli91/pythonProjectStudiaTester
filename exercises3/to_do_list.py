@@ -11,3 +11,6 @@
 # Test dla otrzymywania listy wszystkich zadań.
 # Implementuj metody klasy:
 # Uzupełnij metody zarządzania zadaniami, aby wszystkie testy przeszły pomyślnie.
+
+class List:
+    def __init__(self)

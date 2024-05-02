@@ -21,7 +21,6 @@ class TempConverter:
         temperature_from: float
         fahrenheit: float = temperature_from * 9 / 5 + 32
         return fahrenheit
-        pass
 
     def fahrenheit_to_celsius(self, temperature_from):
         pass
