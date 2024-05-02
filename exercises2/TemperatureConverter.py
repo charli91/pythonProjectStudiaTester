@@ -19,20 +19,25 @@
 class TempConverter:
     def celsius_to_fahrenheit(self, temperature_from):
         temperature_from: float
-        fahrenheit: float = temperature_from * 9 / 5 + 32
+        fahrenheit: float = temperature_from * 1.8 + 32
         return fahrenheit
 
     def fahrenheit_to_celsius(self, temperature_from):
-        pass
+        celsius: float = (temperature_from - 32) / 1.8
+        return celsius
 
     def kelvin_to_celsius(self, temperature_from):
-        pass
+        celsius: float = temperature_from - 273.15
+        return celsius
 
     def celsius_to_kelvin(self, temperature_from):
-        pass
+        kelvin: float = temperature_from + 273.15
+        return kelvin
 
     def fahrenheit_to_kelvin(self, temperature_from):
-        pass
+        kelvin = (temperature_from + 459.67) * (5 / 9)
+        return kelvin
 
     def kelvin_to_fahrenheit(self, temperature_from):
-        pass
+        fahrenheit: float = (temperature_from - 273.15) * 1.8 + 32
+        return fahrenheit
