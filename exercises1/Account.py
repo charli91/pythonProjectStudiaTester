@@ -13,9 +13,12 @@
 # Uzupełnij metody klasy, aby wszystkie testy przeszły pomyślnie.
 
 class Account:
-    def __init__(self, balance, account_number):
+    def __init__(self, account_number, balance=0):
         self.balance = balance
         self.accountNumber = account_number
+
+    def get_balance(self):
+        return self.balance
 
     def deposit(self, payment_transfer_value):
         final_balance = self.balance + payment_transfer_value
@@ -28,5 +31,5 @@ class Account:
             final_balance = self.balance - payment_transfer_value
             return final_balance
 
-    def get_balance(self):
+    def get_account_info(self):
         return f'Balance: {self.balance} PLN, IBAN: {self.accountNumber}'

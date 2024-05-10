@@ -4,7 +4,10 @@ import unittest
 
 class TestAccount(unittest.TestCase):
     def setUp(self):
-        self.account = Account(3123.45, 'PL09184053349573708223772624')
+        self.account = Account('PL09184053349573708223772624', 3123.45)
+
+    def test_account_initialization(self):
+        self.assertEqual(3123.45, self.account.get_balance())
 
     def test_1_account_deposit(self):
         self.assertEqual(self.account.deposit(492.79), 3616.24)
@@ -16,8 +19,8 @@ class TestAccount(unittest.TestCase):
         with self.assertRaises(Exception):
             self.account.withdraw(3123.46)
 
-    def test_4_get_balance(self):
-        self.assertEqual(self.account.get_balance(), f'Balance: 3123.45 PLN, IBAN: PL09184053349573708223772624')
+    def test_4_get_account_info(self):
+        self.assertEqual(self.account.get_account_info(), f'Balance: 3123.45 PLN, IBAN: PL09184053349573708223772624')
 
 
 if __name__ == '__main__':
