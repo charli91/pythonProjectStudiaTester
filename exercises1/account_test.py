@@ -12,6 +12,10 @@ class TestAccount(unittest.TestCase):
     def test_1_account_deposit(self):
         self.assertEqual(self.account.deposit(492.79), 3616.24)
 
+    def test_1_account_deposit_v2(self):
+        self.account.deposit_v2(492.79)
+        self.assertEqual(3616.24, self.account.get_balance())
+
     def test_2_account_withdraw(self):
         self.assertEqual(self.account.withdraw(100), 3023.45)
 

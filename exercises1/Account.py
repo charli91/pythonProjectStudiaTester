@@ -24,6 +24,9 @@ class Account:
         final_balance = self.balance + payment_transfer_value
         return final_balance
 
+    def deposit_v2(self, payment_transfer_value):
+        self.balance += payment_transfer_value
+
     def withdraw(self, payment_transfer_value):
         if payment_transfer_value > self.balance:
             raise Exception("There is no enough money on your account")
