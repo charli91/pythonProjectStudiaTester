@@ -43,6 +43,8 @@ class ToDoList:
 
     def remove_task(self, task_id):
         new_tasks = []
+        # ta pętla przeszukuje całą listę i tworzy nową z pominięciem tego elementu, dla którego id = task_id
+        # a task_id jest argumentem, który przyjmuje ta funkcja
         for task in self.tasks:
             if task['id'] != task_id:
                 new_tasks.append(task)
