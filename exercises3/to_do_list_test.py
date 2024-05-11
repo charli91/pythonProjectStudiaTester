@@ -3,8 +3,11 @@ import unittest
 
 
 class ToDoListTest(unittest.TestCase):
-    def setUp(self):
-        self.list = List()
+    # def setUp(self):
+    #     self.list = List()
+    @classmethod
+    def setUpClass(cls):
+        cls.list = List()
 
     def test_1_add_task(self):
         self.assertEqual(self.list.add_task(), self.list.tasks)
