@@ -10,6 +10,7 @@ class ToDoListTest(unittest.TestCase):
         self.assertEqual(self.list.add_task(), self.list.tasks)
 
     def test_2_remove_task(self):
+        # tutaj pojawia się error, jak wpisuje numer zadania, które chce usunąć, wyższy niż liczba zadań na liście
         self.assertEqual(self.list.remove_task(), self.list.tasks)
 
     def test_3_mark_task_as_done(self):

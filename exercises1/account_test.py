@@ -3,6 +3,9 @@ import unittest
 
 
 class TestAccount(unittest.TestCase):
+
+    # -setUp jest wykonywany przed każdym testem, czyli tu przed każdym testem tworzy się obiekt Account
+    # -self dodany przed oznacza, że ta metoda jest dostępna dla wszystkich metod w danej klasie
     def setUp(self):
         self.account = Account('PL09184053349573708223772624', 3123.45)
 
