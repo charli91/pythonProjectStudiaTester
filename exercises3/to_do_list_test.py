@@ -10,6 +10,9 @@ class ToDoListTest(unittest.TestCase):
     def setUpClass(cls):
         cls.todolist = ToDoList()
 
+    def test_0_get_all_tasks(self):
+        self.assertEqual(0, len(self.todolist.get_all_tasks()))
+
     def test_1_add_task(self):
         size = len(self.todolist.get_all_tasks())
         # self.assertEqual(0, len(self.todolist.get_all_tasks()))
@@ -38,9 +41,6 @@ class ToDoListTest(unittest.TestCase):
         # i sprawdzenie już, że zmieniła nam się wartość z false na true
         self.assertTrue(self.todolist.get_all_tasks()[-1]['done'])
         # self.skipTest('not done yet')
-
-    def test_4_get_all_tasks(self):
-        self.skipTest('not done yet')
 
 
 if __name__ == '__main__':
